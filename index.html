@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Tricks Hub</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%;}
+      50% { background-position: 100% 50%;}
+      100% { background-position: 0% 50%;}
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #0f0f0f, #00ffcc, #111, #c0ff00);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      transition: background 0.5s, color 0.5s;
+}
+
+.light-mode {
+      background: #f4f4f4;
+      color: #111;
+}
+
+    header, footer {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+}
+
+    h1 {
+      color: #00ffcc;
+}
+
+    nav {
+      background: #222;
+      padding: 10px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+}
+
+    nav a {
+      color: #c0ff00;
+      text-decoration: none;
+      font-weight: bold;
+}
+
+    nav a:hover {
+      color: #fff;
+}
+
+    main {
+      padding: 20px;
+}
+
+    section {
+      padding: 20px;
+}
+
+.gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+.gallery img {
+      max-width: 200px;
+      border: 3px solid #c0ff00;
+      border-radius: 8px;
+}
+
+.audio-player {
+      text-align: center;
+      padding: 20px;
+}
+
+.trick {
+      background: #1e1e1e;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #00ffcc;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.6s ease forwards;
+}
+
+.trick:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ffcc;
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+}
+
+    button {
+      background: lime;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+    button:hover {
+      animation: pulse 0.6s infinite;
+}
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);}
+      50% { transform: scale(1.05);}
+}
+
+    #clock {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 10px;
+}
+
+    #typewriter {
+      font-size: 24px;
+      text-align: center;
+      color: lime;
+      margin-bottom: 20px;
+}
+
+    footer {
+      font-size: 14px;
+      color: #aaa;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚙️ Tech Tricks Hub</h1>
+    <p>Learn, Apply, Dominate</p>
+    <div id="clock"></div>
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#images">Images</a>
+    <a href="#music">Music</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <div id="typewriter"></div>
+      <p>Discover cool tech tips and tricks here.</p>
+    </section>
+
+    <section id="images" class="gallery">
+      <img src="https://via.placeholder.com/200" alt="Tech Tip 1" />
+      <img src="https://via.placeholder.com/200" alt="Tech Tip 2" />
+    </section>
+
+    <section id="music" class="audio-player">
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="tricks">
+      <h2 style="text-align: center;">Latest Tech Trick 🔧</h2>
+      <div class="trick">
+        <h3>Bypass App Lock</h3>
+        <p>Use guest mode or clear app data via settings to reset some app locks. Educational use only!</p>
+      </div>
+
+      <button onclick="celebrate()">Upload Your Trick</button>
+
+      <div class="trick">
+        <h3>💡 Bypass App Restrictions</h3>
+        <p>Use Activity Launcher or App Cloner to open hidden activities or create a modded clone.</p>
+      </div>
+
+      <div class="trick">
+        <h3>🌐 Free Internet (VPN Trick)</h3>
+        <p>Use HTTP Custom or HA Tunnel Plus with custom.hc or.hat files for your region.</p>
+      </div>
+
+      <div style="margin-top: 20px; padding: 15px; background: #111; border-left: 4px solid #00ffcc; border-radius: 8px;">
+        <h3 style="color: #00ffcc;">Submit Your Trick</h3>
+        <label for="title">Title:</label><br>
+        <input id="title" type="text" placeholder="Trick Title" style="width: 100%; padding: 8px; margin: 5px 0; border-radius: 5px;"><br>
+        <label for="desc">Description:</label><br>
+        <textarea id="desc" placeholder="Describe your trick..." rows="4" style="width: 100%; padding: 8px; margin: 5px 0; border-radius: 5px;"></textarea><br>
+        <button>Submit Trick</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    2025 Tech Tricks Hub • Built by 𝐒𝐂𝐑𝐈𝐏𝐓𝐈𝐀𝐍𝐒
+  </footer>
+
+  <script>
+    // Voice greeting
+    window.onload = () => {
+      const msg = new SpeechSynthesisUtterance("Welcome to Tech Tricks Hub!");
+      window.speechSynthesis.speak(msg);
+};
+
+    // Dark mode toggle
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+}
+
+    // Live clock
+    setInterval(() => {
+      document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+}, 1000);
+
+    // Typewriter effect
+    const text = "Latest Tech Trick 🔧";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+}
+}
+    type();
+
+    // Confetti celebration (requires canvas-confetti library)
+    function celebrate() {
+      alert("🎉 Trick uploaded! (Confetti coming soon...)");
+}
+  </script>
+</body>
+</html>
+<!-- 🌍 Live Location -->
+<div id="location" style="text-align:center; font-size:18px; margin-top:10px;"></div>
+<script>
+  fetch('https://ipinfo.io/json?token=YOUR_TOKEN_HERE')
+.then(response => response.json())
+.then(data => {
+      document.getElementById("location").innerText = `🌍 You’re visiting from ${data.city}, ${data.country}`;
+});
+</script>
+
+<!-- 🕒 Live Clock -->
+<div id="clock" style="text-align:center; font-size:24px; margin-top:10px;"></div>
+<script>
+  setInterval(() => {
+    document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+}, 1000);
+</script>
+
+<!-- 🎤 Voice Greeting -->
+<script>
+  window.onload = () => {
+    const msg = new SpeechSynthesisUtterance("Welcome to Tech Tricks Hub!");
+    window.speechSynthesis.speak(msg);
+};
+</script>
+
+<!-- 📰 Live Tech News (requires NewsAPI key) -->
+<div id="news" style="padding:20px;"></div>
+<script>
+  fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=YOUR_API_KEY')
+.then(res => res.json())
+.then(data => {
+      const headlines = data.articles.slice(0, 5).map(article => `<li>${article.title}</li>`).join('');
+      document.getElementById("news").innerHTML = `<h3>📰 Latest Tech News</h3><ul>${headlines}</ul>`;
+});
+</script>
+
+<!-- 🎹 Typewriter Effect -->
+<h2 id="typewriter" style="text-align:center; font-size:24px; color:lime;"></h2>
+<script>
+  const text = "Latest Tech Trick 🔧";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("typewriter").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 100);
+}
+}
+  type();
+</script>
